@@ -24,6 +24,7 @@
 ### Highlights
 {% for annotation in annotations -%}
 >[!Annotation|{{annotation.color}}]+
+>#### ^{{annotation.id}}
 >{%- if annotation.annotatedText -%}*« {{annotation.annotatedText}} »* ([Page {{annotation.page}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}}&annotation={{annotation.id}})){% endif %}{% if annotation.imageRelativePath %}![[{{annotation.imageRelativePath}}]][View on page {{annotation.page}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}}){% endif %}{% if annotation.comment %}
 >
 >{{annotation.comment}}{%- endif %}
